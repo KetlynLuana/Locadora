@@ -1,13 +1,15 @@
+package Model;
+
 public class Filme {
 
     private String titulo;
     private String genero;
-    private String valorAluguel;
+    private Double valoraluguel;
 
-    public Filme(String titulo, String genero, String valorAluguel) {
+    public Filme(String titulo, Double valoraluguel, String genero) {
         this.titulo = titulo;
+        this.valoraluguel = valoraluguel;
         this.genero = genero;
-        this.valorAluguel = valorAluguel;
     }
 
     public String getTitulo() {
@@ -26,11 +28,18 @@ public class Filme {
         this.genero = genero;
     }
 
-    public String getValorAluguel() {
-        return valorAluguel;
+    public Double getValoraluguel() {
+        return valoraluguel;
     }
 
-    public void setValorAluguel(String valorAluguel) {
-        this.valorAluguel = valorAluguel;
+    public void setValoraluguel(Double valoraluguel) {
+        this.valoraluguel = valoraluguel;
+    }
+    public String exibirdetalhes() {
+        return "Titulo: " + this.titulo + "\nGênero: " + this.genero + "\nValor do Aluguel: " + this.valoraluguel;
+    }
+    public void aplicardesconto(double percentual){
+        valoraluguel = valoraluguel - (valoraluguel * percentual / 100);
     }
 }
+

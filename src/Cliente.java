@@ -1,29 +1,38 @@
+package Model;
 
 public class Cliente {
 
-    private String nome;
-    private String telefone;
+    private String Nome;
+    private String Telefone;
 
     public Cliente(String nome, String telefone) {
-        this.nome = nome;
-        this.telefone = telefone;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
+        Nome = nome;
+        Telefone = telefone;
     }
 
     public String getTelefone() {
-        return telefone;
+        return Telefone;
     }
 
     public void setTelefone(String telefone) {
-        this.telefone = telefone;
+        Telefone = telefone;
+    }
+
+    public String getNome() {
+        return Nome;
+    }
+
+    public void setNome(String nome) {
+        Nome = nome;
+    }
+
+    public String getContato(){
+        return Nome + " " + Telefone;
+    }
+    public String apresentar(){
+        return "Contato do cliente: " + getContato();
     }
 }
+
     
 
